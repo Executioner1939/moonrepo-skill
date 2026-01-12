@@ -1,0 +1,12 @@
+{
+  "name": "moonrepo-skill",
+  "version": "1.0.0",
+  "description": "Build, run, and manage monorepo tasks with moon. Provides comprehensive moonrepo documentation, commands, configuration schemas, CI/CD patterns, and Docker integration guides.",
+  "author": {
+    "name": "Executioner"
+  },
+  "repository": "https://github.com/Executioner/moonrepo-skill",
+  "license": "MIT",
+  "keywords": ["moonrepo", "moon", "monorepo", "build-system", "task-runner", "ci-cd"],
+  "skills": "./skills/"
+}
