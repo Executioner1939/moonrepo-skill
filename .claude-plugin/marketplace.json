@@ -1,18 +1,27 @@
 {
-  "name": "moonrepo-skills",
+  "name": "executioner-plugins",
   "owner": {
-    "name": "Executioner",
-    "email": "executioner@example.com"
+    "name": "Executioner1939"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by Executioner1939",
+    "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "moonrepo-skill",
-      "source": ".",
-      "description": "Build, run, and manage monorepo tasks with moon. Provides comprehensive moonrepo documentation, commands, configuration schemas, CI/CD patterns, and Docker integration guides.",
+      "name": "moonrepo",
+      "source": {
+        "source": "github",
+        "repo": "Executioner1939/moonrepo-skill"
+      },
+      "description": "Build, run, and manage monorepo tasks with moon. Comprehensive moonrepo documentation, commands, CI/CD patterns, and Docker integration.",
       "version": "1.0.0",
       "author": {
-        "name": "Executioner"
-      }
+        "name": "Executioner1939"
+      },
+      "repository": "https://github.com/Executioner1939/moonrepo-skill",
+      "license": "MIT",
+      "keywords": ["moonrepo", "moon", "monorepo", "build-system", "task-runner"]
     }
   ]
 }
