@@ -16,7 +16,7 @@ A Claude Code plugin for working with [moonrepo](https://moonrepo.dev/) - a task
 Add the marketplace and install the plugin:
 
 ```bash
-/plugin marketplace add Executioner/moonrepo-skill
+/plugin marketplace add Executioner1939/moonrepo-skill
 /plugin install moonrepo-skill
 ```
 
