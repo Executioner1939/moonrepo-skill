@@ -1,11 +1,11 @@
 {
-  "name": "moonrepo",
-  "version": "1.0.0",
-  "description": "Build, run, and manage monorepo tasks with moon. Comprehensive moonrepo documentation, commands, CI/CD patterns, and Docker integration.",
+  "name": "claude-code-skills",
+  "version": "2.0.0",
+  "description": "Collection of Claude Code skills including moonrepo (monorepo task runner), utoipa (Rust OpenAPI), and EventCatalog (event-driven architecture documentation).",
   "author": {
     "name": "Executioner1939"
   },
-  "repository": "https://github.com/Executioner1939/moonrepo-skill",
+  "repository": "https://github.com/Executioner1939/claude-code-skills",
   "license": "MIT",
-  "keywords": ["moonrepo", "moon", "monorepo", "build-system", "task-runner", "ci-cd"]
+  "keywords": ["claude-code", "skills", "moonrepo", "utoipa", "eventcatalog", "rust", "openapi", "event-driven-architecture"]
 }

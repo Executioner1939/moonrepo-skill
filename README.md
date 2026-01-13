@@ -1,51 +1,118 @@
-# moonrepo-skill
+# Claude Code Skills
 
-A Claude Code plugin for working with [moonrepo](https://moonrepo.dev/) - a task runner and build system for monorepos.
+A curated collection of Claude Code skills for modern development workflows. This repository contains high-quality documentation and reference materials for various tools and frameworks.
 
-## Features
+## 📦 Available Skills
 
-- Comprehensive moonrepo command reference
-- Configuration schema documentation
+### 🌙 moonrepo
+**Monorepo Task Runner & Build System**
+
+Comprehensive documentation for [moonrepo](https://moonrepo.dev/) - build, run, and manage monorepo tasks efficiently.
+
+**Features:**
+- Complete command reference with all flags
+- Configuration schemas and best practices
 - CI/CD setup guides (GitHub Actions, GitLab CI, etc.)
 - Docker integration patterns
 - Framework-specific examples (Next.js, Vite, etc.)
-- Utility scripts for common workflows
+- Proto toolchain manager integration
 
-## Installation
+**Use when:** Working with `moon.yml`, `.moon/` configs, monorepo builds, or CI/CD pipelines.
 
-Add the marketplace and install the plugin:
+---
+
+### 🦀 utoipa
+**Rust OpenAPI Documentation Generator**
+
+Auto-generate OpenAPI 3.1 documentation from Rust code using procedural macros.
+
+**Features:**
+- Complete macro reference (`#[utoipa::path]`, `ToSchema`, etc.)
+- Request/response schema documentation
+- Framework integration (Axum, Actix-web, Rocket)
+- Security scheme configuration
+- Advanced patterns and examples
+
+**Use when:** Building REST APIs in Rust, documenting endpoints, generating OpenAPI specs.
+
+---
+
+### 📚 EventCatalog
+**Event-Driven Architecture Documentation**
+
+Document and visualize event-driven architectures with [EventCatalog](https://www.eventcatalog.dev/).
+
+**Features:**
+- Complete API reference for all resource types
+- Domain modeling and service documentation
+- Event, Command, and Query specifications
+- Channel and Flow documentation
+- Entity and Data schema definitions
+- CLI commands and configuration
+
+**Use when:** Documenting EDA systems, AsyncAPI specs, event sourcing, or microservices architectures.
+
+## 📥 Installation
+
+### Install Individual Skills
 
 ```bash
-/plugin marketplace add Executioner1939/moonrepo-skill
-/plugin install moonrepo-skill
+# Add the marketplace
+/plugin marketplace add Executioner1939/claude-code-skills
+
+# Install specific skills
+/plugin install moonrepo
+/plugin install utoipa
+/plugin install eventcatalog
 ```
 
-Or for local development:
+### Local Development
 
 ```bash
-claude --plugin-dir /path/to/moonrepo-skill
+git clone https://github.com/Executioner1939/claude-code-skills.git
+claude --plugin-dir /path/to/claude-code-skills/skills/moonrepo
 ```
 
-## Usage
+## 🎯 Skill Structure
 
-The skill triggers automatically when working with:
-- `moon.yml` or `.moon/` configuration files
-- Running moon commands
-- Setting up CI/CD pipelines for monorepos
-- Docker builds in moonrepo projects
-- Managing multi-project workspaces
+Each skill follows a consistent structure:
 
-## Included Documentation
+```
+skills/
+├── moonrepo/
+│   ├── SKILL.md          # Main skill entry point
+│   ├── COMMANDS.md       # Command reference
+│   ├── CONFIG.md         # Configuration docs
+│   └── scripts/          # Helper scripts
+├── utoipa/
+│   ├── SKILL.md
+│   └── references/       # Detailed reference docs
+└── eventcatalog/
+    ├── SKILL.md
+    └── references/       # API documentation
+```
 
-- **COMMANDS.md** - Complete command reference with all flags
-- **CONFIG.md** - Full configuration schemas
-- **CONCEPTS.md** - Core concepts (workspace, project, task, tokens, MQL)
-- **CI.md** - CI/CD setup and best practices
-- **DOCKER.md** - Docker integration guide
-- **PROTO.md** - Proto toolchain manager
-- **FRAMEWORKS.md** - Framework-specific examples
-- **ADVANCED.md** - Advanced patterns and automation
+## 🤝 Contributing
 
-## License
+Contributions are welcome! To add a new skill or improve existing ones:
+
+1. Fork the repository
+2. Create a feature branch
+3. Add/update skills following the existing structure
+4. Update marketplace.json with skill metadata
+5. Submit a pull request
+
+## 📄 License
 
 MIT
+
+## 🔗 Links
+
+- [moonrepo](https://moonrepo.dev/)
+- [utoipa](https://github.com/juhaku/utoipa)
+- [EventCatalog](https://www.eventcatalog.dev/)
+
+---
+
+**Author:** Executioner1939  
+**Repository:** https://github.com/Executioner1939/claude-code-skills
