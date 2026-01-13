@@ -1,6 +1,6 @@
 {
   "name": "claude-code-skills",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Collection of Claude Code skills including moonrepo (monorepo task runner), utoipa (Rust OpenAPI), and EventCatalog (event-driven architecture documentation).",
   "author": {
     "name": "Executioner1939"
