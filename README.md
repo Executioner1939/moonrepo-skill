@@ -1,86 +1,72 @@
+<div align="center">
+
 # Skunkworks
 
-Claude Code skills collection for modern development workflows.
+**A curated collection of Claude Code skills for modern development workflows.**
 
-## Available Skills
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/Skills-4-green.svg)](#skills)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-blueviolet.svg)](https://docs.anthropic.com/en/docs/claude-code)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Executioner1939/claude-code-skills/pulls)
 
-### moonrepo
-**Monorepo Task Runner & Build System (v2.1.0)**
+Drop-in skills that give Claude Code deep domain expertise — complete API references, configuration guides, and analysis frameworks, so Claude can help you build faster without hallucinating outdated docs.
 
-Comprehensive guide for [moonrepo](https://moonrepo.dev/) v2.1 "Phobos".
+</div>
 
-- All CLI commands with complete flag reference
-- Workspace, toolchain, and task configuration
-- CI/CD pipelines with sharding and affected detection
-- Docker multi-stage builds and scaffolding
-- Code generation with Tera templates
-- WASM plugin toolchains and extensions
-- MQL query language
-- Remote caching
-- v1-to-v2 migration guide
-
-**Use when:** Working with `moon.yml`, `.moon/` configs, `moon run`, `moon ci`, or monorepo builds.
-
----
-
-### utoipa
-**Rust OpenAPI Documentation Generator (v5.4.0)**
-
-Auto-generate OpenAPI 3.1 documentation from Rust code with [utoipa](https://github.com/juhaku/utoipa).
-
-- All derive macros: `ToSchema`, `OpenApi`, `IntoParams`, `IntoResponses`, `ToResponse`
-- Complete `#[utoipa::path]` attribute reference
-- Framework integrations: Axum, Actix-web, Rocket
-- UI integrations: Swagger UI, Redoc, RapiDoc, Scalar
-- Security schemes, enum handling, generics, validation
-- 25+ cargo feature flags
-
-**Use when:** Building REST APIs in Rust, documenting endpoints with OpenAPI.
-
----
-
-### eventcatalog
-**Event-Driven Architecture Documentation**
-
-Document and visualize event-driven architectures with [EventCatalog](https://www.eventcatalog.dev/).
-
-- All 12 resource types with complete frontmatter API
-- 184+ SDK/utils functions
-- 15+ generator integrations (OpenAPI, AsyncAPI, GraphQL, Confluent, AWS)
-- MCP server with 15 tools and 12 resources
-- Visualizations: NodeGraph, flows, Mermaid, embedded diagrams
-- Schema support: JSON Schema, Avro, Protobuf
-- Authentication (GitHub, Google, Azure AD, Okta, Auth0)
-
-**Use when:** Documenting EDA systems, managing event schemas, visualizing service architectures.
-
----
-
-### codebase-archaeology
-**Deep Codebase Analysis & Transformation Planning**
-
-Systematically reverse-engineer and analyze existing codebases.
-
-- Extracts business rules, maps data flows, traces dependencies
-- 7 analysis lenses: migration, architecture, decomposition, risk, documentation, testing, debt
-- Two-agent system: archaeologist (excavates) + strategist (plans)
-- Structured output templates for every finding type
-- Transformation planning with sequencing and risk registers
-
-**Use when:** Understanding inherited code, planning migrations, due diligence, assessing technical debt, building test strategies.
-
-## Installation
+## Quick Start
 
 ```bash
 # Add the marketplace
 /plugin marketplace add Executioner1939/claude-code-skills
 
-# Install specific skills
+# Install the skills you need
 /plugin install moonrepo@skunkworks
 /plugin install utoipa@skunkworks
 /plugin install eventcatalog@skunkworks
 /plugin install codebase-archaeology@skunkworks
 ```
+
+## Skills
+
+### :crescent_moon: moonrepo `v3.0.0`
+> Monorepo Task Runner & Build System — covers moon v2.1.0
+
+Comprehensive [moonrepo](https://moonrepo.dev/) reference: all CLI commands, workspace/toolchain/task configuration, CI/CD pipelines with sharding, Docker multi-stage builds, code generation with Tera, WASM plugin toolchains, MQL queries, remote caching, and v1-to-v2 migration.
+
+**Triggers on:** `moon.yml` · `.moon/` configs · `moon run` · `moon ci` · monorepo builds
+
+---
+
+### :crab: utoipa `v2.0.0`
+> Rust OpenAPI Documentation Generator — covers utoipa 5.4.0
+
+Complete [utoipa](https://github.com/juhaku/utoipa) reference: all 5 derive macros (`ToSchema`, `OpenApi`, `IntoParams`, `IntoResponses`, `ToResponse`), `#[utoipa::path]` attributes, framework integrations (Axum, Actix, Rocket), UI integrations (Swagger UI, Redoc, RapiDoc, Scalar), security schemes, enum handling, generics, validation, and 25+ cargo features.
+
+**Triggers on:** `utoipa` · OpenAPI in Rust · `ToSchema` · Swagger UI setup · API documentation
+
+---
+
+### :zap: eventcatalog `v2.0.0`
+> Event-Driven Architecture Documentation
+
+Complete [EventCatalog](https://www.eventcatalog.dev/) reference: all 12 resource types, 184+ SDK functions, 15+ generator integrations (OpenAPI, AsyncAPI, GraphQL, Confluent, AWS), MCP server with 15 tools, visualizations (NodeGraph, flows, Mermaid), schema support (JSON Schema, Avro, Protobuf), and authentication.
+
+**Triggers on:** EventCatalog · event documentation · AsyncAPI · service catalog · message flows
+
+---
+
+### :mag: codebase-archaeology `v1.1.0`
+> Deep Codebase Analysis & Transformation Planning
+
+Two-agent system that systematically reverse-engineers existing codebases: extracts business rules, maps data flows, traces dependencies, and produces transformation plans. Supports 7 analysis lenses (migration, architecture, decomposition, risk, documentation, testing, debt) with structured output templates.
+
+**Triggers on:** analyze codebase · reverse engineer · extract business rules · plan migration · due diligence · technical debt
+
+## How Skills Work
+
+Skills give Claude Code domain-specific knowledge through structured reference files. When you ask about a topic covered by an installed skill, Claude automatically loads the relevant documentation — accurate, version-pinned, and comprehensive — instead of relying on training data that may be outdated.
+
+Each skill follows Anthropic's [official skill design guide](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) with progressive disclosure: a concise SKILL.md for common tasks, and detailed reference files loaded on demand for deep dives.
 
 ## License
 
